@@ -1,19 +1,24 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import PageLayout from "./components/shared/layout/PageLayout";
+import CurrentClean from "./components/CurrentClean";
+import PageContentDisplay from "./components/shared/layout/PageContentDisplay";
+import Properties from "./components/Properties";
+
+
 function App() {
   return (
     <div>
-      <header>
-        <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
-        <h1>React Essentials</h1>
-        <p>
-          Fundamental React concepts you will need for almost any app you are
-          going to build!
-        </p>
-      </header>
-      <main>
-        <h2>Time to get started!</h2>
-      </main>
+      <Router basename="/"> 
+        <Routes>
+          <Route path="/" element={<PageLayout />}>
+          <Route index element={<PageContentDisplay />} />
+          <Route path="current-cleans" element={<CurrentClean />} />
+          <Route path="properties" element={<Properties />} />
+          </Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
-
 export default App;

@@ -1,0 +1,62 @@
+{
+  "tabs": [
+    {
+      "id": "access",
+      "title": "Building Access",
+      "description": "Use code 1234 to enter the main gate. The apartment key is in a lockbox near the door (code: 5678)."
+    },
+    {
+      "id": "walkthrough",
+      "title": "Inspection Walkthrough",
+      "sections": [
+        {
+          "label": "Overall Condition",
+          "options": [
+            { "value": "poor", "label": "Poor" },
+            { "value": "fair", "label": "Fair" },
+            { "value": "good", "label": "Good" }
+          ],
+          "defaultValue": "good"
+        },
+        {
+          "label": "Damages",
+          "checkbox": {
+            "id": "damages",
+            "label": "Any visible damages?"
+          }
+        },
+        {
+          "label": "Lighting",
+          "checkbox": {
+            "id": "lighting",
+            "label": "All lights functioning?"
+          }
+        },
+        {
+          "label": "Appliances",
+          "checkboxes": [
+            { "id": "tv", "label": "TV operational?" },
+            { "id": "appliances", "label": "All appliances working?" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "checklist",
+      "title": "Cleaning Checklist",
+      "currentTaskLabel": "View Current Task",
+      "tasks": [
+        "Dust the furniture.",
+        "Vacuum the carpets.",
+        "Clean the kitchen.",
+        "Mop the floors.",
+        "Disinfect bathrooms."
+      ]
+    },
+    {
+      "id": "decor",
+      "title": "Interior Decor Instructions",
+      "description": "Ensure all artwork is straight. Fluff the yellow armchair cushions. Arrange flowers in the vase on the side table. Ensure the gold floor lamp is positioned correctly next to the chair."
+    }
+  ]
+}
